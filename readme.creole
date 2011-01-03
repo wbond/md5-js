@@ -1,0 +1,5 @@
+= MD5
+
+The file {{{md5.js}}} provides {{{md5()}}}, a slight modification of [[http://www.myersdaily.org/joseph/javascript/md5-text.html|Joseph Myers's high-performance function]]. Joseph's original functions have been wrapped in a self-invocating function so the only name added to the global namespace is {{{md5()}}}. In addition, the script will detect unicode and convert it to UTF-8 before hashing.
+
+Due to the check for unicode and potential conversion to UTF-8, this function is slower that Joseph's original, but will produce identical results to server-side md5() functions executed on UTF-8-encoded text. There is a basic performance test at http://jsperf.com/md5-shootout.
